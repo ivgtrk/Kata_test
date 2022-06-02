@@ -10,8 +10,10 @@ class ExpressionReader
         String[] ret = new String[3];
         String input = scn.nextLine();
         ret = input.split(" ");
-        if(ret.length > 3)
-            throw new Exception("Array Length > 3!");
+        if(ret.length != 3)
+            throw new Exception("Incorrect expression length!");
+        if(ret[1].length() > 1)
+            throw new Exception("The operator is not recognized!");
         return  ret;
     }
 }
